@@ -1,0 +1,11 @@
+{ % extends 'base.html' % }
+
+{ % block content % }
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <h3>Weather Application</h3>
+    <script>
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?q=mumbai&appid=7de7313c646f15c056b5daaeda647efa",function(data){
+            console.log(data);
+        });
+    </script>
+{ % endblock % }
