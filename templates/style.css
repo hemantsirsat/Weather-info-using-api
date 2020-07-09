@@ -1,0 +1,35 @@
+body{
+    background-image: url('images/landingbg.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;   
+}
+#info-box{
+    position: fixed;
+    left: 35%;
+    top: 30%;
+    text-align: justify;
+    padding: 10px;
+    width: 30%;
+}
+.hidden{
+    visibility: none;
+}
+#city{
+    width: 100%;
+}
+
+.btn{
+    width: 100%;
+}
+
+.info{
+    width: 100%;
+    padding-top:20px;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: medium;
+    color: wheat;
+}
+.info p{
+    margin: 0px;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Information</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="main">
+        <div class="container" id="info-box">
+            <div class="form1">
+                <form method="POST">
+                    <div class="form-group">
+                        <input type = "text" name = "city" id = "city" class = "form-control" placeholder = "Mumbai">
+                    </div>
+                    <div class="form-inline">
+                        <input type="button" class="btn btn-primary mt-2" id="check" value="Check">
+                    </div>
+                </form>
+            </div>
+            <div class="info">
+                <p class="name"></p>
+                <p class="description"></p>
+                <p class="Current-Temperature"></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        $("#check").click(function(){
+            var city = document.getElementById("city").value;
+            var n = city;
+            city = "https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=7de7313c646f15c056b5daaeda647efa"
+            $.getJSON(city,function(data){
+                var place = data.name;
+                $('.name').append(place);
+                
+                console.log(data);
+
+                var temp = data.main.temp;
+                temp = "Temperature: " + temp;
+                var desc = data.weather[0].description;
+
+                $('.Current-Temperature').append(temp);
+                $('.description').append(desc);
+
+                if(temp > 250){
+                    var img = 'https://images.unsplash.com/uploads/14121010130570e22bcdf/e1730efe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80';
+                    $('#main').attr('src',img)
+                };
+            });
+        });
+    </script>
+</body>
+</html>
