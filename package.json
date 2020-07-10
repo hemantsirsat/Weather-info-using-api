@@ -1,0 +1,22 @@
+{
+  "name": "weather",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hemantsirsat/Weather-info-using-api.git"
+  },
+  "keywords": [
+    "weather-api"
+  ],
+  "author": "Hemant",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hemantsirsat/Weather-info-using-api/issues"
+  },
+  "homepage": "https://github.com/hemantsirsat/Weather-info-using-api#readme"
+}
