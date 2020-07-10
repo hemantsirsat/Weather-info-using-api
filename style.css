@@ -1,7 +1,12 @@
-body{
+#main{
+    position: fixed;
+    top:0;
+    right: 0;
     background-image: url('images/landingbg.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
+    min-width: 100%;
+    min-height:100%;
 
 }
 #info-box{
